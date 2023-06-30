@@ -1,0 +1,36 @@
+import PropTypes from 'prop-types';
+
+import ContactList from 'components/ContactList/ContactList';
+import Filter from 'components/Filter/Filter';
+import { Title, Wrap } from './Contacts.style';
+
+export default function Contacts({
+  contacts,
+  value,
+  title,
+
+  onRemoveContact,
+  onChange,
+}) {
+  return (
+    <Wrap>
+      <Title>{title}</Title>
+      <Filter onChange={onChange} value={value} />
+      <ContactList onRemoveContact={onRemoveContact} contacts={contacts} />
+    </Wrap>
+  );
+}
+
+Contacts.propTypes = {
+  title: PropTypes.string.isRequired,
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
+    }).isRequired
+  ),
+  value: PropTypes.string.isRequired,
+  onRemoveContact: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
+};
