@@ -67,12 +67,13 @@ export default class App extends Component {
             value={filter}
             onChange={this.changeFilter}
             onRemoveContact={this.removeContact}
-          ></Contacts>
+          >
+            {!isPhonebookEmpty && filterContacts.length === 0 && (
+              <Notification message="nothing found" />
+            )}
+          </Contacts>
         ) : (
           <Notification message="Your phonebook is empty." />
-        )}
-        {!isPhonebookEmpty && filterContacts.length === 0 && (
-          <Notification message="There is empty." />
         )}
       </Section>
     );

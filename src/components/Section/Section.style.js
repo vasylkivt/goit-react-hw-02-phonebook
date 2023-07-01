@@ -10,7 +10,7 @@ export const SectionWrap = styled.section`
 
   background-color: ${({ theme }) => theme.colors.set4};
 
-  width: 450px;
+  width: 550px;
 `;
 
 export const Title = styled.h1`

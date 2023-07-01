@@ -8,7 +8,7 @@ export default function Contacts({
   contacts,
   value,
   title,
-
+  children,
   onRemoveContact,
   onChange,
 }) {
@@ -17,6 +17,7 @@ export default function Contacts({
       <Title>{title}</Title>
       <Filter onChange={onChange} value={value} />
       <ContactList onRemoveContact={onRemoveContact} contacts={contacts} />
+      {children}
     </Wrap>
   );
 }

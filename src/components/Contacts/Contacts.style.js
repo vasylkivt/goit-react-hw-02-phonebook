@@ -12,5 +12,11 @@ export const Title = styled.h2`
 `;
 
 export const Wrap = styled.div`
-  border: 2px solid black;
+  padding-top: 30px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: ${({ theme }) => theme.colors.set1}60;
 `;

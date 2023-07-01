@@ -34,6 +34,8 @@ export const TextWrap = styled.div`
 
   text-transform: capitalize;
 
+  transition: all 300ms ease-in-out;
+
   &:hover {
     border: 1px solid black;
     background-color: ${({ theme }) => theme.colors.set3};
@@ -56,6 +58,8 @@ export const Button = styled.button`
   border-radius: 8px;
   background-color: ${({ theme }) => theme.colors.set1};
   border: none;
+
+  transition: all 300ms ease-in-out;
 
   & > svg {
     width: 30px;

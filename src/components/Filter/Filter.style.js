@@ -11,11 +11,15 @@ export const InputName = styled.label`
 
 export const Input = styled.input`
   margin-bottom: 25px;
-  margin-left: 20px;
+
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 10px;
   padding-right: 10px;
+
+  /* border-radius: 5px; */
+
+  /* background-color: transparent; */
   color: ${({ theme }) => theme.colors.titleColor};
   font-weight: 500;
   font-size: 16px;
