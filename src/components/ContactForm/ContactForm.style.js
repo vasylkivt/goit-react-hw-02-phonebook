@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import phone from '../../phone-book.png';
-console.log('phone:', phone);
 
 export const Form = styled.form`
   background-image: url(${phone});

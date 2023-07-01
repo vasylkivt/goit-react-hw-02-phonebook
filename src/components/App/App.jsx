@@ -29,7 +29,7 @@ export default class App extends Component {
   addContact = contact => {
     this.setState(prevState => {
       const isExist = prevState.contacts.find(
-        ({ name }) => name === contact.name
+        ({ name }) => name.toLowerCase() === contact.name.toLowerCase()
       );
 
       if (isExist) {
